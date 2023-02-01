@@ -1,44 +1,20 @@
-# Node Modules
-node_modules
-
-# Visual Studio Code
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-!.vscode/*.code-snippets
-*.code-workspace
-
-# Local History for Visual Studio Code
-.history/
-
-# Built Visual Studio Code Extensions
-*.vsix
 
 # General
 .DS_Store
-.AppleDouble
-.LSOverride
+.vscode
+.idea
+node_modules
+yarn-error.log
 
-# Icon must end with two \r
-Icon
 
-# Thumbnails
-._*
+# https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+# Files need to be gitignored, when not using Zero-installs:
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+# It is important to maintain the order of the above list
 
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
