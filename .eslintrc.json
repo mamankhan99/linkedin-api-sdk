@@ -1,0 +1,70 @@
+{
+    "env": { "es6": true },
+    "extends": ["plugin:prettier/recommended"],
+    "ignorePatterns": [
+        "!.prettierrc.json",
+        "coverage",
+        "lib",
+        "node_modules"
+    ],
+    "plugins": ["json-format"],
+    "root": true,
+    "rules": {
+        "sort-keys": ["error", "asc", { "natural": true }]
+    },
+    "settings": {
+        "json/json-with-comments-files": [],
+        "json/sort-package-json": "standard"
+    },
+    "overrides": [
+        {
+            "env": {
+                "es6": true
+            },
+            "extends": [
+                "plugin:@typescript-eslint/recommended",
+                "prettier"
+            ],
+            "files": ["*.ts", "*.tsx"],
+            "parser": "@typescript-eslint/parser",
+            "parserOptions": {
+                "sourceType": "module"
+            },
+            "plugins": ["import", "prettier", "simple-import-sort"],
+            "rules": {
+                "@typescript-eslint/consistent-type-imports": ["error", { "prefer": "type-imports" }],
+                "@typescript-eslint/explicit-function-return-type": "off",
+                "@typescript-eslint/explicit-member-accessibility": "off",
+                "@typescript-eslint/no-explicit-any": "error",
+                "@typescript-eslint/no-unused-vars": [
+                    "error",
+                    { "argsIgnorePattern": "^_", "ignoreRestSiblings": true }
+                ],
+                "@typescript-eslint/prefer-interface": "off",
+                "curly": "error",
+                "import/no-cycle": ["error", { "ignoreExternal": true }],
+                "no-console": ["error", { "allow": ["warn", "error"] }],
+                "object-shorthand": "error",
+                "prettier/prettier": "error",
+                "simple-import-sort/exports": "error",
+                "simple-import-sort/imports": "error",
+                "sort-imports": "off",
+                "sort-keys": "off"
+            },
+            "settings": {
+                "import/parsers": {
+                    "@typescript-eslint/parser": [".ts", ".tsx"]
+                },
+                "import/resolver": {
+                    "typescript": {
+                        "project": [
+                            "configs/tsconfig.base.json"
+                        ],
+                        "alwaysTryTypes": true // always try to resolve types under `<root/>@types` directory even if it doesn"t contain any source code, like `@types/unist`
+                    }
+                }
+                
+            }
+        }
+    ]
+}

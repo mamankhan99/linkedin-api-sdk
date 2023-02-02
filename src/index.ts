@@ -1,7 +1,7 @@
-function sayHi() {
-  console.log("hi");
-}
+const isLinkedin = (message: string) => {
+  return message === 'linkedin';
+};
 
 export default {
-  sayHi,
+  isLinkedin,
 };
