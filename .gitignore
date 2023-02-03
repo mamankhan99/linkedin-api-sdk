@@ -6,17 +6,5 @@
 node_modules
 yarn-error.log
 
-
-# https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
-# Files need to be gitignored, when not using Zero-installs:
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
-# It is important to maintain the order of the above list
-
 # Output files
 dist
