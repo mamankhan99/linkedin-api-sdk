@@ -19,4 +19,4 @@ yarn-error.log
 # It is important to maintain the order of the above list
 
 # Output files
-lib
+dist

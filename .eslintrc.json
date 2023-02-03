@@ -4,7 +4,7 @@
     "ignorePatterns": [
         "!.prettierrc.json",
         "coverage",
-        "lib",
+        "dist",
         "node_modules"
     ],
     "plugins": ["json-format"],
@@ -58,7 +58,7 @@
                 "import/resolver": {
                     "typescript": {
                         "project": [
-                            "configs/tsconfig.base.json"
+                            "tsconfig.json"
                         ],
                         "alwaysTryTypes": true // always try to resolve types under `<root/>@types` directory even if it doesn"t contain any source code, like `@types/unist`
                     }
